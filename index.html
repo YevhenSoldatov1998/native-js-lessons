@@ -4,107 +4,26 @@
 
 <head>
     <title>Список Постів</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        #posts {
-            width: 80%;
-            margin: 20px auto;
-            padding: 10px;
-        }
-
-        .post {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .post h2 {
-            margin-top: 0;
-            color: #333;
-        }
-
-        .post p {
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
-<div id="posts">
-    <div class="post" id="post1">
-        <h2>Заголовок Посту 1</h2>
-        <p>Опис посту 1...</p>
-        <button>DELETE</button>
-    </div>
+<div id="root"></div>
 
-    <div class="post">
-        <h2>Заголовок Посту 2</h2>
-        <p>Опис посту 2...</p>
-        <button>DELETE</button>
-
-    </div>
-
-    <div class="post">
-        <h2>Заголовок Посту 2</h2>
-        <p>Опис посту 2...</p>
-        <button id="deleteAll">DELETE ALL POST (FORCE)</button>
-
-    </div>
-
-
-</div>
-
-<script>
-    const buttonDeleteAll = document.querySelector('#deleteAll')
-
-    function handler(event) {
-        const posts = document.querySelector('#posts')
-        const buttonElement = event.currentTarget
-        buttonElement.style.background = 'green'
-        posts.remove()
-    }
-
-    buttonDeleteAll.addEventListener('click', handler)
-</script>
-
-<!--<script>-->
-<!--    const posts = document.querySelector('#posts')-->
-<!--    const buttons = posts.querySelectorAll('button')-->
-<!--    buttons.forEach(button => {-->
-<!--        button.addEventListener('click', (event) => {-->
-<!--            const buttonElement = event.currentTarget-->
-<!--            const div = buttonElement.parentElement-->
-<!--            div.remove()-->
-<!--        })-->
-
-<!--    })-->
-<!--</script>-->
-
-<!--<script>-->
-<!--    const posts = document.querySelector('#posts')-->
-
-<!--    posts.sayHello = (text) => alert('Hello ' + text)-->
-
-<!--    const buttons = posts.querySelectorAll('button')-->
-<!--    buttons.forEach(button => {-->
-
-<!--        button.addEventListener('click', (event) => {-->
-<!--            const buttonElement = event.currentTarget-->
-<!--            const buttonText = buttonElement.innerText-->
-<!--            posts.sayHello(buttonText)-->
-<!--        })-->
-
-<!--    })-->
-<!--</script>-->
+<script src="js/objects.js"></script>
+<script src="./js/index.js"></script>
 
 </body>
 </html>
+
+
+
+
+<!--<div id="posts">-->
+<!--&lt;!&ndash;    <div class="post">&ndash;&gt;-->
+<!--        &lt;!&ndash;        <h2>Заголовок Посту 2</h2>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <p>Опис посту 2...</p>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <button id="deleteAll">DELETE ALL POST (FORCE)</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    <button>Add new post</button>-->
+<!--</div>-->
